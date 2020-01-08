@@ -8,7 +8,7 @@
 
 int main () {
 	FILE *fp;	
-	fp = freopen("input2.txt", "r", stdin); 
+	fp = freopen("input3.txt", "r", stdin); 
 	
     char buf[LINE_SIZE];    
     memset(buf, 0, LINE_SIZE);
@@ -26,18 +26,21 @@ int main () {
 	        int valor = strtol(buf, NULL, 10);
 	        
 			if (valor == 0) break;
-	        	
-			int i, quantidadeDeNotas = 0;
+			if (valor < 10000) {
+				int i, quantidadeDeNotas = 0;
 			
-			printf("Teste %d\n", t++);
-			
-	        for (i = 0; i < sizeof(notas)/sizeof(notas[0]); i++) {
-	        	quantidadeDeNotas = valor / notas[i];
-	        	valor = valor % notas[i];		        	
-	        	printf("%d ", quantidadeDeNotas);
-	        }
-	        
-	        printf("\n\n");
+				printf("Teste %d\n", t++);
+				
+		        for (i = 0; i < sizeof(notas)/sizeof(notas[0]); i++) {
+		        	quantidadeDeNotas = valor / notas[i];
+		        	valor = valor % notas[i];		        	
+		        	printf("%d ", quantidadeDeNotas);
+		        }
+		        
+		        printf("\n\n");
+			} else {
+				printf("Teste %d\n\n", t++);
+			}
     	}
     }
 
