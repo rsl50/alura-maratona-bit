@@ -8,7 +8,7 @@
 
 int main () {
 	FILE *fp;	
-	fp = freopen("input1.txt", "r", stdin); 
+	fp = freopen("input2.txt", "r", stdin); 
 	
     char buf[LINE_SIZE];    
     memset(buf, 0, LINE_SIZE);
@@ -18,7 +18,7 @@ int main () {
     	return(-1);
     }
     else {
-        int notas[] = {50, 10, 5, 1};
+        int notas[] = {100, 50, 10, 5, 1};
         int t = 1;
 		
 		while(fgets(buf, sizeof(buf), fp) != NULL) {
